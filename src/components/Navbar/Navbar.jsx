@@ -1,10 +1,11 @@
 import React from "react";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
-function Inicio() {
+const Inicio = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -12,8 +13,12 @@ function Inicio() {
                     Tienda de Vinos
                 </Navbar>
                 <Nav className="navbar">
-                    <p>Nosotros</p>
-                    <p>Productos</p>
+                    <Link to="/">
+                        <p>Home</p>
+                    </Link>
+                    <Link to="productos">
+                        <p>Productos</p>
+                    </Link>
                     <p>Contacto</p>
                 </Nav>
                 <CartWidget />
